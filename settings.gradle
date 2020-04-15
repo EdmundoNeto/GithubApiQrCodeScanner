@@ -1,0 +1,4 @@
+rootProject.name='QrCodeScanner'
+include ':app'
+include ':domain'
+include ':qrcodescanner'

@@ -1,0 +1,28 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.edmundo.qrcodescanner" >
+
+    <application>
+
+        <activity
+            android:name=".view.QrCodeScannerActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".view.RepositoriesActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".view.CommitsActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+
+</manifest>

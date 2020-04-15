@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="request_permission_description">A permissão de uso de camera é necessária para que o aplicativo funcione.</string>
+    <string name="request_permission_button_ok">Ok</string>
+    <string name="request_permission_button_cancel">Cancelar</string>
+    <string name="unrecognized_code">Código não reconhecido.</string>
+    <string name="qrcode_label">Posicione o QRCode na área de leitura.</string>
+    <string name="user_notfound">Usuário não encontrado.</string>
+
+    <string name="no_repos_availiable">Nenhum repositório encontrado. :(</string>
+    <string name="no_commit_availiable">Nenhum commit encontrado. :(</string>
+    <string name="refresh_error_button">Recarregar</string>
+    <string name="error_title">Ooooops</string>
+    <string name="error_body">Esta se sentindo perdido e desconectado, como se estivesse em uma ilha deserta? Siga o conselho, fique calmo, acenda uma luz e continue regarregando.</string>
+
+    <string name="commited_at">Comitado %s</string>
+    <string name="commit_activity">Commits</string>
+    <string name="repositorys_activity">Repositórios</string>
+</resources>

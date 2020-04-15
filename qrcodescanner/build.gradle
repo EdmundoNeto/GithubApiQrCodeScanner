@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "kotlin-kapt"
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+android {
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //architecture components
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.liveData"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.liveData"
+    implementation "androidx.lifecycle:lifecycle-runtime:$versions.liveData"
+    implementation "com.github.bumptech.glide:glide:$versions.glide"
+    implementation "com.airbnb.android:lottie:$versions.lottie"
+    implementation "com.google.android.material:material:$versions.material"
+    implementation "androidx.cardview:cardview:$versions.cardview"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
+
+    implementation project (':domain')
+
+    implementation('me.dm7.barcodescanner:zxing:1.9.8') {
+        //exclude group: 'com.android.support'
+        //exclude module: 'support-media-compat'
+        exclude module: 'support-v4'
+    }
+
+    implementation 'pub.devrel:easypermissions:1.2.0'
+
+    //dependency injection
+    implementation "org.koin:koin-android:2.0.1"
+    implementation "org.koin:koin-android-scope:2.0.1"
+    implementation "org.koin:koin-android-viewmodel:2.0.1"
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation "org.robolectric:robolectric:$versions.robolectric"
+    testImplementation "io.mockk:mockk:$versions.mockk"
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
